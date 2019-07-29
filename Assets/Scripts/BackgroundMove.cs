@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class BackgroundMove : MonoBehaviour
 {
-    private float moveSpeed = 2f;
+    private float moveSpeed;
     private Vector3 fristPosition;
- 
+
     void Start()
     {
         fristPosition =transform.position;
+        moveSpeed = 2f;
     }
     // Update is called once per frame
     void Update()

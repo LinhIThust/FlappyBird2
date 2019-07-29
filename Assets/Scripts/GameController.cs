@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject birdObject;
 
     // Start is called before the first frame update
-  
+ 
     void Start()
     {
         bigScore = PlayerPrefs.GetInt("high_score");

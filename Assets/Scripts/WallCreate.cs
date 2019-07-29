@@ -5,15 +5,13 @@ using UnityEngine;
 public class WallCreate : MonoBehaviour
 {
     // Start is called before the first frme update
-    private float moveSpeed = 2;
-    private float oldPosition = 4;
-    private Vector3 fristPosition;
+    private float moveSpeed;
 
     void Start()
     {
-        fristPosition = transform.position;
+        moveSpeed = 2;
     }
-
+  
     void Update()
     {
         transform.Translate(-1 * Time.deltaTime * moveSpeed, 0, 0);
@@ -22,7 +20,7 @@ public class WallCreate : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("WallReset"))
         {
-            transform.position = new Vector3(oldPosition, Random.Range(1, 4), 0);
+            transform.position = new Vector3(4, Random.Range(1, 4), 0);
         }
     }
 

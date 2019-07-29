@@ -1,0 +1,46 @@
+@startuml
+
+class Bird{
+    -AudioSource audioSource
+    -AudioClip audioBirdFly
+    -Float force
+    -GameObject gameController
+    -void Start()
+    -void Update()
+    -void OnCollisionEnter2D()
+    -void OnTriggerEnter2D()
+
+
+}
+class GameContrller{
+    -Int score
+    -Int bigScore
+    -Bool gameOVer
+    -GameObject menuPanel
+    -GameObject birdObject
+    -Text textScore
+    -Text endScore
+    -Text highScore
+    +void SetUpGame()
+    +void UpdateScore()
+    +void GameOver()
+    +void UpdateHighScore()
+
+}
+
+class Background{
+    -Vecto3 firstPosition
+    -Float moveSpeed
+    -void Start()
+    -void Update()
+}
+
+class WallCreate(){
+    -Float moveSpeed
+    -void Start()
+    -void Update()
+    -void OnTriggerEnter2D()
+
+}
+
+@enduml
